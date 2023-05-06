@@ -1,8 +1,10 @@
 from django.test import TestCase, Client
+from django.urls import reverse
 
 class IndexViewTestCase(TestCase):
     def setUp(self):
         self.client = Client()
+        self.url = reverse('index')
 
     def tearDown(self):
         pass
