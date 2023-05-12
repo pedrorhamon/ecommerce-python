@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from catalog.models import Category
 
 def index(request):
-    context = {
-        'categories': Category.objects.all()
-    }
+    # context = {
+    #     'categories': Category.objects.all()
+    # }
     return render(request, 'index.html', context)
 
 
