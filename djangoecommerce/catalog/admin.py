@@ -14,7 +14,6 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ['name', 'slug', 'category__name'];
     list_filter = ['created', 'modified'];
 
-
 admin.site.register(Category, CategoryAdmin);
 admin.site.register(Product, ProductAdmin);
 
