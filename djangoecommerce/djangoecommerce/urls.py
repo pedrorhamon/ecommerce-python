@@ -22,7 +22,7 @@ from core import views;
 urlpatterns = [
     path('', views.index, name='index'),
     path('contato/', views.contact, name='contact'),
-    path('produto/', views.product, name='product'),
-    path('produtos/', include('catalog.urls', 'catalog')),
+    # path('produto/', views.product, name='product'),
+    path('catalogo/', include('catalog.urls', 'catalog')),
     path('admin/', admin.site.urls),
 ]

@@ -21,6 +21,7 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse("catalog:category", kwargs={'slug': self.slug})
+        
     
 
 
@@ -39,5 +40,11 @@ class Product(models.Model):
         verbose_name = 'Produto'
         verbose_name_plural = 'Produtos'
         ordering = ['name']
+
+    def __str__(self):
+        return self.name;
+
+    def get_absolute_url(self):
+        return reverse("catalog:product", kwargs={'slug': self.slug})
 
 # Create your models here.

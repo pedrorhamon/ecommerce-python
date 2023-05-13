@@ -16,4 +16,11 @@ def category(request, pk=None, slug=None):
     }
     return render(request, 'catalog/category.html', context);
 
+def product(request, pk=None, slug=None):
+    product = Product.objects.get(slug=slug)
+    context = {
+        'product': product
+    }
+    return render(request, 'catalog/product.html', context);
+
 # Create your views here.

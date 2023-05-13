@@ -16,5 +16,5 @@ def contact(request):
 #     return render(request, 'product_list.html')
 
 
-def product(request):
-    return render(request, 'product.html')
+# def product(request):
+#     return render(request, 'product.html')
