@@ -12,7 +12,11 @@ def index(request):
 
 
 def contact(request):
+   if request.method == 'POST':
+    form = ContactForm(request.POST)
+   else:
     form = ContactForm()
+    
     context = {
         'form': form
     }
