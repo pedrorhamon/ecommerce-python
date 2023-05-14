@@ -2,9 +2,9 @@ from django import forms
 
 class ContactForm(forms.Form): 
 
-    name = forms.CharField(label='Nome', required=True);
-    email = forms.EmailField(label='E-mail', required=True);
-    mensagem = forms.CharField(label='Mensagem', widget=forms.Textarea(), required=True);
+    name = forms.CharField(label='Nome');
+    email = forms.EmailField(label='E-mail');
+    mensagem = forms.CharField(label='Mensagem', widget=forms.Textarea());
 
     # def __init__(self, *args, **kwargs):
     #     super(ContactForm, self).__init__(*args, **kwargs);
