@@ -131,10 +131,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # E-mail
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = ''
+EMAIL_HOST_USER = 'pedror@gmail.com'
 EMAIL_PORT = 465
-EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'pedrorhamon16@gmail.com'
+EMAIL_HOST_PASSWORD = 'Senha*'
+DEFAULT_FROM_EMAIL = 'pedror@gmail.com'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
