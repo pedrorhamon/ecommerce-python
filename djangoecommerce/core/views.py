@@ -12,15 +12,14 @@ def index(request):
 
 
 def contact(request):
-   if request.method == 'POST':
-    form = ContactForm(request.POST)
-   else:
-    form = ContactForm()
-    
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+    else:
+        form = ContactForm()
     context = {
         'form': form
     }
-    return render(request, 'contact.html',context)
+    return render(request, 'contact.html', context)
 
 # def product_list(request):
 #     return render(request, 'product_list.html')
