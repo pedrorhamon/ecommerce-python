@@ -1,6 +1,10 @@
 from django.test import TestCase, Client;
 from django.urls import reverse;
 from model_mommy import mommy
+from django.conf import settings
+from django.core import mail
+
+from core.views import User
 
 class IndexViewTestCase(TestCase):
     def setUp(self):
