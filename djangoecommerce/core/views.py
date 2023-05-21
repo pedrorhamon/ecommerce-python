@@ -1,10 +1,6 @@
-from typing import Any
 from django.shortcuts import render;
-from django.http import HttpResponse;
 # from catalog.models import Category
-from django.views.generic import TemplateView, CreateView
-from django.contrib.auth.forms import UserCreationForm
-from django.urls import reverse_lazy
+from django.views.generic import TemplateView
 from django.contrib.auth import get_user_model
 
 
@@ -36,15 +32,6 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
-class RegisterView(CreateView):
-
-    form_class = UserCreationForm
-    template_name = 'register.html'
-    model = User
-    success_url = reverse_lazy('index')
-
-
-register = RegisterView.as_view()
 # def product_list(request):
 #     return render(request, 'product_list.html')
 
