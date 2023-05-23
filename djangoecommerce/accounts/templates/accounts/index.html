@@ -4,7 +4,7 @@
 
 {% block container %}
 <ol class="breadcrumb"style="margin-top: 20px;">
-  <li><a href="#">Início</a></li>
+  <li><a href="{% url 'accounts:index' %}">Início</a></li>
   <li class="active">Minha Conta</li>
 </ol>
 <div class="row">
@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-8">
         {% block accounts_container %}
-            <h2>Bem vindo Fulano</h2>
+            <h2>Bem vindo {{user}}</h2>
         {% endblock %}
     </div>
 </div>
