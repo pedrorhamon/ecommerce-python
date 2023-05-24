@@ -2,7 +2,7 @@ from django.shortcuts import render;
 # from catalog.models import Category
 from django.views.generic import TemplateView
 from django.contrib.auth import get_user_model
-from django.contrib.messages import messages
+from django.contrib.messages import constants
 
 from .forms import ContactForm;
 
@@ -27,7 +27,7 @@ def contact(request):
         form.send_mail()
         success = True
     elif request.method == 'POST':
-         messages.error(request, 'Formulário inválido')
+         constants.error(request, 'Formulário inválido')
     context = {
         'form': form,
         'success': success
