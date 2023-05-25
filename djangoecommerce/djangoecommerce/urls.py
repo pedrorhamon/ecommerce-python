@@ -30,5 +30,6 @@ urlpatterns = [
     # path('registro/', views.register, name='register'),
     path('catalogo/', include('catalog.urls', 'catalog')),
     path('conta/', include('accounts.urls', 'accounts')),
+    path('compras/', include('checkout.urls', 'checkout')),
     path('admin/', admin.site.urls),
 ]
