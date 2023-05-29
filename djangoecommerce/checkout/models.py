@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 class CartItemManager(models.Manager):
 
@@ -48,7 +49,7 @@ class Order(models.Model):
         ('paypal', 'Paypal'),
     )
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Usuário')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='Usuário', on_delete=models.CASCADE)
     status = models.IntegerField(
         'Situação', choices=STATUS_CHOICES, default=0, blank=True
     )
