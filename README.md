@@ -1,3 +1,3 @@
 # ecommerce-python
 
-curso de ecommerce em python utilizando as boas práticas de desenvolvimento. SQL Lite
+curso de ecommerce em python 3 utilizando as boas práticas de desenvolvimento. SQL Lite
